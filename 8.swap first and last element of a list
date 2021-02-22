@@ -8,4 +8,4 @@ return swaplist(newList)
 
 #driver code
 newList=[12,15,45,56,23]
-print(newList)
+print swaplist(newList)

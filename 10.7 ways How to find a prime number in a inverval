@@ -1,0 +1,250 @@
+lower = 900
+upper = 1000
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+           
+
+#Method 2. See if a prime number is a prime
+
+def isPrime(n) : 
+ 
+    # Corner cases 
+    if (n <= 1) : 
+        return False
+    if (n <= 3) : 
+        return True
+ 
+    # This is checked so that we can skip 
+    # middle five numbers in below loop 
+    if (n % 2 == 0 or n % 3 == 0) : 
+        return False
+ 
+    i = 5
+    while(i * i <= n) : 
+        if (n % i == 0 or n % (i + 2) == 0) : 
+            return False
+        i = i + 6
+ 
+    return True
+ 
+ 
+# Driver Program 
+if (isPrime(11)) : 
+    print(" true") 
+else : 
+    print(" false") 
+     
+if(isPrime(15)) : 
+    print(" true") 
+else : 
+    print(" false") 
+     
+     
+# This code is contributed 
+# by Nikita Tiwari. 
+
+#3.And another way to exam if a prime number exists
+# Program to check if a number is prime or not
+
+num = 407
+
+# To take input from the user
+#num = int(input("Enter a number: "))
+
+# prime numbers are greater than 1
+if num > 1:
+   # check for factors
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+       
+# if input number is less than
+# or equal to 1, it is not prime
+else:
+   print(num,"is not a prime number")
+   
+   
+   #Method 4. 
+   
+   # Prime Number Sieve
+
+ 2. # http://inventwithpython.com/hacking (BSD Licensed)
+
+ 4. import math
+
+ 7. def isPrime(num):
+
+ 8.     # Returns True if num is a prime number, otherwise False.
+
+10.     # Note: Generally, isPrime() is slower than primeSieve().
+
+12.     # all numbers less than 2 are not prime
+
+13.     if num < 2:
+
+14.         return False
+
+16.     # see if num is divisible by any number up to the square root of num
+
+17.     for i in range(2, int(math.sqrt(num)) + 1):
+
+18.         if num % i == 0:
+
+19.             return False
+
+20.     return True
+
+23. def primeSieve(sieveSize):
+
+24.     # Returns a list of prime numbers calculated using
+
+25.     # the Sieve of Eratosthenes algorithm.
+
+27.     sieve = [True] * sieveSize
+
+28.     sieve[0] = False # zero and one are not prime numbers
+
+29.     sieve[1] = False
+
+30.
+
+31.     # create the sieve
+
+32.     for i in range(2, int(math.sqrt(sieveSize)) + 1):
+
+33.         pointer = i * 2
+
+34.         while pointer < sieveSize:
+
+35.             sieve[pointer] = False
+
+36.             pointer += i
+
+37.
+
+38.     # compile the list of primes
+
+39.     primes = []
+
+40.     for i in range(sieveSize):
+
+41.         if sieve[i] == True:
+
+42.             primes.append(i)
+
+43.
+
+44.     return primes
+
+
+#Method 5. use for loop
+
+# Python Program to print Prime Numbers from 1 to 100
+ 
+for Number in range (1, 101):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+        
+ #Method 6. use while loop
+ 
+ # Python Program to print Prime Numbers from 1 to 100
+ 
+Number = 1
+
+while(Number <= 100):
+    count = 0
+    i = 2
+    
+    while(i <= Number//2):
+        if(Number % i == 0):
+            count = count + 1
+            break
+        i = i + 1
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+    Number = Number  + 1
+    
+#6. User input , using for loop
+
+# Python Program to print Prime Numbers from 1 to N
+ 
+minimum = int(input(" Please Enter the Minimum Value: "))
+maximum = int(input(" Please Enter the Maximum Value: "))
+
+for Number in range (minimum, maximum + 1):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+        
+  #7. sum of the prime using for loop
+  
+   # Python Program to find Sum of Prime Numbers from 1 to N
+ 
+minimum = int(input(" Please Enter the Minimum Value: "))
+maximum = int(input(" Please Enter the Maximum Value: "))
+total = 0
+
+for Number in range (minimum, maximum + 1):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+        total = total + Number
+
+print("\n\nSum of Prime Numbers from %d to %d = %d" %(minimum, maximum, total))
+
+#8. Back the maxium and minium value
+
+# Python Program to print Prime Numbers from 1 to N
+ 
+minimum = int(input(" Please Enter the Minimum Value: "))
+maximum = int(input(" Please Enter the Maximum Value: "))
+total = 0
+
+Number = minimum
+
+while(Number <= maximum):
+    count = 0
+    i = 2
+    
+    while(i <= Number//2):
+        if(Number % i == 0):
+            count = count + 1
+            break
+        i = i + 1
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+        total = total + Number
+    Number = Number  + 1
+        
+print("\n\nSum of Prime Numbers from %d to %d = %d" %(minimum, maximum, total))

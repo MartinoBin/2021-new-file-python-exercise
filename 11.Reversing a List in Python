@@ -11,3 +11,14 @@ def reverse(newlist):
 	
 print(reverse(newlist))
 
+# Method 2
+
+# Reversing a list using slicing technique 
+
+def reverse(newlist): 
+    new_list = newlist[::-1] 
+    return new_list 
+      
+newlist = [10, 11, 12, 13, 14, 15]
+
+print(Reverse(newlist)) 

@@ -22,3 +22,10 @@ def reverse(newlist):
 newlist = [10, 11, 12, 13, 14, 15]
 
 print(Reverse(newlist)) 
+
+
+# Method 3 
+
+mylist=list(range(1,201))
+
+print(mylist[::-1])

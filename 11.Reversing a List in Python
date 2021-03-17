@@ -1,0 +1,13 @@
+#Method 1
+
+newlist=list(range(1,40))
+
+print(newlist)
+
+def reverse(newlist):
+
+	newlist.reverse()
+	return newlist
+	
+print(reverse(newlist))
+

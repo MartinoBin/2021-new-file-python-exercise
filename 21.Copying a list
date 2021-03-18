@@ -1,0 +1,140 @@
+'''
+
+Copying a list 
+
+Method 1 
+
+Copying a list. 
+
+Using [:] method
+
+''' 
+
+def copylist(mylist):
+	list_copy=mylist[:]
+	return list_copy
+
+mylist=[1,2,3,4,5]
+list2=copylist(mylist)
+
+print('Original list:',mylist)
+print('After copying:',list2)
+
+
+'''
+Method 2
+
+Using the extend() method
+The lists can be copied into a new list by using the extend() function. 
+This appends each element of the iterable object (e.g., anothre list) to the end of the new list. 
+This takes around 0.053 second to complete.
+Example:
+
+# Python code to clone or copy a list 
+# Using the in-built function extend()
+
+'''
+
+def Cloning(li1): 
+    li_copy = [] 
+    li_copy.extend(li1) 
+    return li_copy 
+  
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+
+"""
+Method 3
+
+Using the list() method
+This is the simplest method of cloning a list by using the builtin function list(). This takes about 0.075 seconds to complete.
+Example:
+
+
+# Python code to clone or copy a list 
+# Using the in-built function list()
+"""
+
+def Cloning(li1): 
+    li_copy = list(li1) 
+    return li_copy 
+  
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+
+
+'''
+Method 4
+
+Using list comprehension
+The method of list comprehension can be used to copy all the elements individually from one list to another. This takes around 0.217 seconds to complete.
+
+# Python code to clone or copy a list 
+# Using list comprehension 
+
+'''
+
+def Cloning(li1): 
+    li_copy = [i for i in li1] 
+    return li_copy 
+  
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+
+
+
+'''
+Method 5
+
+Using the append() method
+This can be used for appending and adding elements to list or copying them to a new list. It is used to add elements to the last position of list. This takes around 0.325 seconds to complete and is the slowest method of cloning.
+
+# Python code to clone or copy a list 
+# Using append()
+
+''' 
+def Cloning(li1): 
+    li_copy =[] 
+    for item in li1: li_copy.append(item) 
+    return li_copy 
+  
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+
+
+
+'''
+Method 6
+
+Using the copy() method
+The inbuilt method copy is used to copy all the elements from one list to another. This takes around 1.488 seconds to complete.
+Example:
+
+# Python code to clone or copy a list 
+# Using bilt-in method copy() 
+
+'''
+
+def Cloning(li1): 
+    li_copy =[] 
+    li_copy = li1.copy() 
+    return li_copy 
+  
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+

@@ -1,0 +1,48 @@
+# My method Find all the Odd numbers in the list
+
+mylist=list(range(1,200))
+
+for i in mylist:
+	
+	if i % 2 != 0:
+
+		print(i,end=" ")
+
+	else:
+		continue
+
+
+
+#1: Print all Odd numbers from given list using for loop
+
+# Define start and end limit of range. 
+
+# Iterate from start till the range in the list using for loop and check if num % 2 == 0. If the condition satisfies, then only print the number.
+
+# Python program to print Odd Numbers in given range 
+  
+start, end = 1, 20
+  
+# iterating each number in list 
+for num in range(start, end + 1): 
+      
+    # checking condition 
+    if num % 2 != 0: 
+        print(num, end = " ") 
+
+
+
+#2: Taking range limit from user input
+
+# Python program to print Odd Numbers in given range 
+  
+start = int(input("Enter the start of range: ")) 
+end = int(input("Enter the end of range: ")) 
+  
+# iterating each number in list 
+for num in range(start, end + 1): 
+      
+    # checking condition 
+    if num % 2 != 0: 
+        print(num, end = " ")
+

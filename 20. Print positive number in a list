@@ -1,4 +1,95 @@
+# My method to print positive number in a list
+
+
+mylist=list(range(-20,20))
+
+for i in mylist:
+	
+	if i >0:
+
+		print(i,end=" ")
+
+	else:
+		continue
+
+
+
+#1: Print all positive numbers from given list using for loop
+
+# Iterate each element in the list using for loop and check if number is greater than or equal to 0. 
+
+# If the condition satisfies, then only print the number.
+
+
+# Python program to print positive Numbers in a List 
+  
+# list of numbers
+
+list1 = [11, -21, 0, 45, 66, -93] 
+  
+# iterating each number in list 
+for num in list1: 
+      
+    # checking condition 
+    if num >= 0: 
+       print(num, end = " ") 
+
+
+
+#2: Using while loop
+
+
+# Python program to print positive Numbers in a List 
+  
+# list of numbers 
+
+list1 = [-10, 21, -4, -45, -66, 93] 
+num = 0
+  
+# using while loop      
+while(num < len(list1)): 
+      
+    # checking condition 
+    if list1[num] >= 0: 
+        print(list1[num], end = " ") 
+      
+    # increment num  
+    num += 1
+
+
+   #3: Using list comprehension
+
+
+# Python program to print Positive Numbers in a List 
+  
+# list of numbers 
+list1 = [-10, -21, -4, 45, -66, 93] 
+  
+# using list comprehension 
+pos_nos = [num for num in list1 if num >= 0] 
+  
+print("Positive numbers in the list: ", *pos_nos) 
+
+
  #4: Using lambda expressions
+
+
+# Python program to print positive Numbers in a List 
+  
+# list of numbers  
+
+list1 = [-10, 21, 4, -45, -66, 93, -11]    
+  
+# we can also print positive no's using lambda exp.  
+pos_nos = list(filter(lambda x: (x >= 0), list1)) 
+  
+print("Positive numbers in the list: ", *pos_nos)  
+
+
+
+
+
+#4: Using lambda expressions
 
 
 # Python program to print positive Numbers in a List 

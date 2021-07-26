@@ -10,16 +10,16 @@ HEIGHT=20
 
 nextCells=[]
 for x in range(WIDTH):
-  Column=[] # Create a new column.
-  for y in range(HEIGHT):
-    if random.randint(0,1)==0:
-      column.append('#') # Add a living cell.
-     else:
-      column.append(' ') # Add a dead cell.
-  nextCells.append(column) # nextCells is a list of column lists.
+    column=[] # Create a new column.
+    for y in range(HEIGHT):
+        if random.randint(0,1)==0:
+            column.append('#') # Add a living cell.
+        else:
+            column.append(' ') # Add a dead cell.
+    nextCells.append(column) # nextCells is a list of column lists.
   
   
-  while True: # Main program loop.
+while True: # Main program loop.
     print('\n\n\n\n\n') # Separate each step with newlines. 
     currentCells=copy.deepcopy(nextCells)
     
@@ -37,27 +37,27 @@ for x in range(WIDTH):
     leftCoord =(x-1)% WIDTH
     rightCoord=(x+1)% WIDTH
     rightCoord=(y-1)% HEIGHT
-    aboveCoord=(y-1)$ HEIGHT
+    aboveCoord=(y-1)% HEIGHT
     belowCoord=(y+1)% HEIGHT
     
     # Count number of living neighbors:
     numNeighbors=0
-    if currentCells[leftCoord][aboveCoord]=='#'
-    numNeighbors +=1 # Top-lief neighbor is alive.
-    if currentCells[x][aboveCoord]=='#'
-    numNeighbors+=1 # Top neighbor is alive.
-    if currentCells[rightCoord][aboveCoord]=='#'
-    numNeighbors +=1 # Top-right neighbor is alive.
-    if currentCells[leftCoord][y]=='#'
-    numNeighbors +=1 # Left neighbor is alive.
-    if currentCells[rightCoord][y]=='#'
-    numNeighbors +=1 #right neighbor is alive.
-    if currentCells[leftCoord][belowCoord]=='#'
-    numNeighbors +=1 # Bottom-left neighbor is alive. 
-    if currentCells[x][belowCoord]=='#'
-    numNeighbors +=1 # Bottom neighbor is alive.
-    if currentCells[rightCoord][belowCoord]=='#'
-    numNeighbors +=1 # Bottom-right neighbor is alive.
+    if currentCells[leftCoord][aboveCoord]=='#':
+        numNeighbors +=1 # Top-lief neighbor is alive.
+    if currentCells[x][aboveCoord]=='#':
+        numNeighbors+=1 # Top neighbor is alive.
+    if currentCells[rightCoord][aboveCoord]=='#':
+        numNeighbors +=1 # Top-right neighbor is alive.
+    if currentCells[leftCoord][y]=='#':
+        numNeighbors +=1 # Left neighbor is alive.
+    if currentCells[rightCoord][y]=='#':
+        numNeighbors +=1 #right neighbor is alive.
+    if currentCells[leftCoord][belowCoord]=='#':
+        numNeighbors +=1 # Bottom-left neighbor is alive. 
+    if currentCells[x][belowCoord]=='#':
+        numNeighbors +=1 # Bottom neighbor is alive.
+    if currentCells[rightCoord][belowCoord]=='#':
+        numNeighbors +=1 # Bottom-right neighbor is alive.
     
     # Set cell based on conway's game of life rules:
     if currentCells[x][y]=='#' and (numNeighbors ==2 or numneighbors ==3):
@@ -69,4 +69,4 @@ for x in range(WIDTH):
     else:
       # Everything else dies or stays dead:
       nextCells[x][y]=' '
- time.sleep(1) # Add a 1 second pause to reduce flickering. 
+time.sleep(1) # Add a 1 second pause to reduce flickering.
